@@ -7,7 +7,7 @@ define([
   var PageView = Backbone.View.extend({
     render: function() {
       $(this.el).html(_.template(pageTemplate, this.model));
-	  return this;
+      return this;
     }
   });
   return PageView;

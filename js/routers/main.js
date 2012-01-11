@@ -11,17 +11,17 @@ define([
     },
 
     test: function() {
- 	  var pv = new PageView({
-		model: {
-		  page: {
-			id: 'test',
-			header: 'header',
-			content: 'content',
-			//footer: 'footer'
-	      }
-		}
-	  });
-	  $('body').append(pv.render().el);
+      var pv = new PageView({
+        model: {
+          page: {
+            id: 'test',
+            header: 'header',
+            content: 'content',
+            //footer: 'footer'
+          }
+        }
+      });
+      $('body').append(pv.render().el);
     },
 
     defaultAction: function(actions){
