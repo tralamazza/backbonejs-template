@@ -1,20 +1,28 @@
 define([
-  'jqueryMobile',
+  'jquery',
   'underscore',
   'backbone',
-], function($, _, Backbone){
+  'views/common/page'
+], function($, _, Backbone, PageView){
   var AppRouter = Backbone.Router.extend({
     routes: {
       'test': 'test',
-	  '*actions': 'defaultAction'
+      '*actions': 'defaultAction'
     },
 
     test: function() {
-	  console.log('#test called');
-	  var ulist = $('#mainpage').find('ul');
-	  ulist.append('<li>foo</li>').listview('refresh');
-	  console.log('ulist: ', ulist);
-	},
+ 	  var pv = new PageView({
+		model: {
+		  page: {
+			id: 'test',
+			header: 'header',
+			content: 'content',
+			//footer: 'footer'
+	      }
+		}
+	  });
+	  $('body').append(pv.render().el);
+    },
 
     defaultAction: function(actions){
       console.log('No route:', actions);
