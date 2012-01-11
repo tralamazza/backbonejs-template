@@ -1,12 +1,20 @@
 define([
-  'jquery',
+  'jqueryMobile',
   'underscore',
   'backbone',
 ], function($, _, Backbone){
   var AppRouter = Backbone.Router.extend({
     routes: {
-      '*actions': 'defaultAction'
+      'test': 'test',
+	  '*actions': 'defaultAction'
     },
+
+    test: function() {
+	  console.log('#test called');
+	  var ulist = $('#mainpage').find('ul');
+	  ulist.append('<li>foo</li>').listview('refresh');
+	  console.log('ulist: ', ulist);
+	},
 
     defaultAction: function(actions){
       console.log('No route:', actions);
