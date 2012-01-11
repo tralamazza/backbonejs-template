@@ -1,9 +1,11 @@
 require.config({
   paths: {
-    jqueryMobile: 'libs/jquery.mobile/require-jquery.mobile',
-	jquery: 'libs/jquery/jquery-1.7.1.min',
+    jquery: 'libs/jquery/jquery-1.7.1.min',
+	jqueryMobile: 'libs/jquery.mobile/require-jquery.mobile',
     underscore: 'libs/underscore/underscore-min',
-    backbone: 'libs/backbone/backbone-optamd3'
+    backbone: 'libs/backbone/backbone-optamd3',
+	text: 'libs/require/text',
+	templates: '../templates'
   }
 });
 
